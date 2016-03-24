@@ -1,5 +1,6 @@
 class PicsController < ApplicationController
 	before_action :find_pic, only: [:show, :edit, :update, :destroy]
+	before_action :authenticate_user!, except: [ :index, :show ]
 
 	def index
 		@pics = Pic.all.order("created_at DESC")
@@ -9,7 +10,7 @@ class PicsController < ApplicationController
 		
 	end
 	def new
-		@pic = current_user.pics.build	
+		@pic = current_user.pics.build
 	end
 
 	def create
