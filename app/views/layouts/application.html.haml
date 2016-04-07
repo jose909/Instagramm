@@ -12,14 +12,14 @@
 
 			- if user_signed_in?
 				%ul.nav.navbar-nav.navbar-left
-					%li= link_to "Gram it", new_pic_path
+					%li= link_to "Nuevo Pic", new_pic_path
 					%li= link_to "Settings", edit_user_registration_path
-					%li= link_to "Sign Out", destroy_user_session_path, method: :delete
+					%li= link_to "Salir", destroy_user_session_path, method: :delete
 
 			- else
 				%ul.nav.navbar-nav.navbar-left
-					%li= link_to "Join", new_user_registration_path
-					%li= link_to "Lon In", new_user_session_path	
+					%li= link_to "Regístrate", new_user_registration_path
+					%li= link_to "inicio", new_user_session_path	
 
 	.container
 		-flash.each do |name, msg|
