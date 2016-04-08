@@ -8,4 +8,5 @@ Rails.application.routes.draw do
 	end
 
  root 'pics#index'
+ get 'mypics' => 'pics#mypics'
 end
