@@ -42,7 +42,7 @@ class PicsController < ApplicationController
 
 	def destroy
 		@pic.destroy
-		redirect_to root_pach
+		redirect_to root_path
 	end
 
 	def upvote
